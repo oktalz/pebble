@@ -1,4 +1,4 @@
-module github.com/canonical/pebble
+module github.com/oktalz/pebble
 
 go 1.24.6
 
