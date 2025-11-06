@@ -70,6 +70,9 @@ var (
 	// failDelay is the duration given to services for shutting down when Pebble
 	// sends a SIGKILL signal.
 	failDelay = 5 * time.Second
+
+	// stopSignalDefault is the signal sent to a service when it's asked to stop.
+	stopSignalDefault = syscall.SIGTERM
 )
 
 const (
@@ -715,6 +718,17 @@ func (s *serviceData) killDelay() time.Duration {
 	return killDelayDefault
 }
 
+// killDelay reports the duration that this service should be given when being
+// asked to shut down gracefully before being force-terminated. The value
+// returned will either be the service's pre-configured value, or the default
+// kill delay if that is not set.
+func (s *serviceData) stopSignal() syscall.Signal {
+	if s.config.StopSignal.IsSet {
+		return s.config.StopSignal.Value
+	}
+	return stopSignalDefault
+}
+
 // stop is called to stop a running (or backing off) service.
 func (s *serviceData) stop() error {
 	s.manager.servicesLock.Lock()
@@ -728,7 +742,7 @@ func (s *serviceData) stop() error {
 	case stateRunning:
 		logger.Debugf("Attempting to stop service %q by sending SIGTERM", s.config.Name)
 		// First send SIGTERM to try to terminate it gracefully.
-		err := syscall.Kill(-s.cmd.Process.Pid, syscall.SIGTERM)
+		err := syscall.Kill(-s.cmd.Process.Pid, s.stopSignal())
 		if err != nil {
 			logger.Noticef("Cannot send SIGTERM to process: %v", err)
 		}
@@ -859,7 +873,7 @@ func (s *serviceData) checkFailed(action plan.ServiceAction) {
 			case stateRunning:
 				logger.Noticef("Service %q %s action is %q, terminating process before restarting",
 					s.config.Name, onType, action)
-				err := syscall.Kill(-s.cmd.Process.Pid, syscall.SIGTERM)
+				err := syscall.Kill(-s.cmd.Process.Pid, s.stopSignal())
 				if err != nil {
 					logger.Noticef("Cannot send SIGTERM to process: %v", err)
 				}
