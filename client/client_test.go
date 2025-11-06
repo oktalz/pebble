@@ -36,7 +36,7 @@ import (
 
 	. "gopkg.in/check.v1"
 
-	"github.com/canonical/pebble/client"
+	"github.com/oktalz/pebble/client"
 )
 
 // Hook up check.v1 into the "go test" runner
@@ -108,7 +108,7 @@ func (cs *clientSuite) Do(req *http.Request) (*http.Response, error) {
 		rsp.TLS = &tls.ConnectionState{
 			PeerCertificates: []*x509.Certificate{
 				// TLS certificate.
-				&x509.Certificate{},
+				{},
 				// ID Certificate.
 				cs.serverIdCert,
 			},

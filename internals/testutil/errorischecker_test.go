@@ -19,7 +19,7 @@ import (
 
 	. "gopkg.in/check.v1"
 
-	. "github.com/canonical/pebble/internals/testutil"
+	. "github.com/oktalz/pebble/internals/testutil"
 )
 
 type errorIsCheckerSuite struct{}
@@ -64,5 +64,4 @@ func (*errorIsCheckerSuite) TestErrorIsWithInvalidArguments(c *C) {
 	res, errMsg = ErrorIs.Check([]any{errors.New(""), ""}, []string{"error", "target"})
 	c.Assert(res, Equals, false)
 	c.Assert(errMsg, Equals, "second argument must be an error")
-
 }

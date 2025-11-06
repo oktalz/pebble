@@ -23,9 +23,9 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/canonical/pebble/internals/logger"
-	"github.com/canonical/pebble/internals/osutil"
-	"github.com/canonical/pebble/internals/overlord/state"
+	"github.com/oktalz/pebble/internals/logger"
+	"github.com/oktalz/pebble/internals/osutil"
+	"github.com/oktalz/pebble/internals/overlord/state"
 )
 
 // ExecArgs holds the arguments for a command execution.

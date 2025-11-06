@@ -3,7 +3,7 @@ package servstate
 import (
 	"fmt"
 
-	"github.com/canonical/pebble/internals/overlord/state"
+	"github.com/oktalz/pebble/internals/overlord/state"
 )
 
 // ServiceRequest holds the details required to perform service tasks.

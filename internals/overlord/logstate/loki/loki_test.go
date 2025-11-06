@@ -27,8 +27,8 @@ import (
 
 	. "gopkg.in/check.v1"
 
-	"github.com/canonical/pebble/internals/overlord/logstate/loki"
-	"github.com/canonical/pebble/internals/servicelog"
+	"github.com/oktalz/pebble/internals/overlord/logstate/loki"
+	"github.com/oktalz/pebble/internals/servicelog"
 )
 
 type suite struct{}

@@ -20,7 +20,7 @@ import (
 
 	"gopkg.in/tomb.v2"
 
-	"github.com/canonical/pebble/internals/overlord/state"
+	"github.com/oktalz/pebble/internals/overlord/state"
 )
 
 type CommandManager struct {

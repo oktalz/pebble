@@ -22,8 +22,8 @@ import (
 
 	"gopkg.in/yaml.v3"
 
-	"github.com/canonical/pebble/internals/osutil"
-	"github.com/canonical/pebble/internals/plan"
+	"github.com/oktalz/pebble/internals/osutil"
+	"github.com/oktalz/pebble/internals/plan"
 )
 
 type Workload struct {

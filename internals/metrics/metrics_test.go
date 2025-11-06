@@ -20,7 +20,7 @@ import (
 
 	. "gopkg.in/check.v1"
 
-	"github.com/canonical/pebble/internals/metrics"
+	"github.com/oktalz/pebble/internals/metrics"
 )
 
 func Test(t *testing.T) {

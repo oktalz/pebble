@@ -28,10 +28,10 @@ import (
 	. "gopkg.in/check.v1"
 	"gopkg.in/yaml.v3"
 
-	"github.com/canonical/pebble/internals/overlord"
-	"github.com/canonical/pebble/internals/overlord/pairingstate"
-	"github.com/canonical/pebble/internals/overlord/state"
-	"github.com/canonical/pebble/internals/plan"
+	"github.com/oktalz/pebble/internals/overlord"
+	"github.com/oktalz/pebble/internals/overlord/pairingstate"
+	"github.com/oktalz/pebble/internals/overlord/state"
+	"github.com/oktalz/pebble/internals/plan"
 )
 
 // Hook up check.v1 into the "go test" runner.
@@ -61,7 +61,6 @@ func (ps *pairingSuite) TearDownTest(c *C) {
 // newManager creates a new pairing manager only after it
 // persists the paired state.
 func (ps *pairingSuite) newManager(c *C, s *pairingstate.PairingDetails) {
-
 	if s != nil {
 		ps.state.Lock()
 		ps.state.Set(pairingstate.PairingDetailsAttr, *s)

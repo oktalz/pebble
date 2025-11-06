@@ -22,9 +22,9 @@ import (
 
 	"gopkg.in/check.v1"
 
-	"github.com/canonical/pebble/internals/osutil"
-	"github.com/canonical/pebble/internals/osutil/sys"
-	"github.com/canonical/pebble/internals/testutil"
+	"github.com/oktalz/pebble/internals/osutil"
+	"github.com/oktalz/pebble/internals/osutil/sys"
+	"github.com/oktalz/pebble/internals/testutil"
 )
 
 type userSuite struct {

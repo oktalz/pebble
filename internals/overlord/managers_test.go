@@ -19,8 +19,8 @@ package overlord_test
 import (
 	. "gopkg.in/check.v1"
 
-	"github.com/canonical/pebble/internals/overlord"
-	"github.com/canonical/pebble/internals/testutil"
+	"github.com/oktalz/pebble/internals/overlord"
+	"github.com/oktalz/pebble/internals/testutil"
 )
 
 type mgrsSuite struct {
@@ -31,9 +31,7 @@ type mgrsSuite struct {
 	o *overlord.Overlord
 }
 
-var (
-	_ = Suite(&mgrsSuite{})
-)
+var _ = Suite(&mgrsSuite{})
 
 func (s *mgrsSuite) SetUpTest(c *C) {
 	s.BaseTest.SetUpTest(c)

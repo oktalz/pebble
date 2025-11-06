@@ -22,8 +22,8 @@ import (
 
 	"gopkg.in/check.v1"
 
-	"github.com/canonical/pebble/internals/osutil"
-	"github.com/canonical/pebble/internals/osutil/sys"
+	"github.com/oktalz/pebble/internals/osutil"
+	"github.com/oktalz/pebble/internals/osutil/sys"
 )
 
 type mkdirSuite struct{}
@@ -77,7 +77,7 @@ func (mkdirSuite) TestExistsButNotDir(c *check.C) {
 func (mkdirSuite) TestDirEndWithSlash(c *check.C) {
 	tmpDir := c.MkDir()
 
-	err := osutil.Mkdir(tmpDir+"/foo/", 0755, nil)
+	err := osutil.Mkdir(tmpDir+"/foo/", 0o755, nil)
 	c.Assert(err, check.IsNil)
 }
 
@@ -135,7 +135,7 @@ func (mkdirSuite) TestParentExistsButNotDir(c *check.C) {
 }
 
 func (mkdirSuite) TestChmod(c *check.C) {
-	oldmask := syscall.Umask(0022)
+	oldmask := syscall.Umask(0o022)
 	defer syscall.Umask(oldmask)
 
 	tmpDir := c.MkDir()
@@ -152,7 +152,7 @@ func (mkdirSuite) TestChmod(c *check.C) {
 }
 
 func (mkdirSuite) TestNoChmod(c *check.C) {
-	oldmask := syscall.Umask(0022)
+	oldmask := syscall.Umask(0o022)
 	defer syscall.Umask(oldmask)
 
 	tmpDir := c.MkDir()
@@ -187,7 +187,7 @@ func (mkdirSuite) TestMakeParentsAndChmod(c *check.C) {
 }
 
 func (mkdirSuite) TestMakeParentsAndNoChmod(c *check.C) {
-	oldmask := syscall.Umask(0022)
+	oldmask := syscall.Umask(0o022)
 	defer syscall.Umask(oldmask)
 
 	tmpDir := c.MkDir()

@@ -19,7 +19,7 @@ import (
 
 	"gopkg.in/check.v1"
 
-	"github.com/canonical/pebble/client"
+	"github.com/oktalz/pebble/client"
 )
 
 func (cs *clientSuite) TestHealthGet(c *check.C) {

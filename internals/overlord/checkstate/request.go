@@ -17,8 +17,8 @@ package checkstate
 import (
 	"fmt"
 
-	"github.com/canonical/pebble/internals/overlord/state"
-	"github.com/canonical/pebble/internals/plan"
+	"github.com/oktalz/pebble/internals/overlord/state"
+	"github.com/oktalz/pebble/internals/plan"
 )
 
 type checkDetails struct {

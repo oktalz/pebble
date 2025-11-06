@@ -21,7 +21,7 @@ import (
 
 	. "gopkg.in/check.v1"
 
-	"github.com/canonical/pebble/internals/osutil"
+	"github.com/oktalz/pebble/internals/osutil"
 )
 
 type mountinfoSuite struct{}
@@ -158,7 +158,7 @@ func (s *mountinfoSuite) TestReadMountInfo2(c *C) {
 // Test that loading mountinfo from a file works as expected.
 func (s *mountinfoSuite) TestLoadMountInfo1(c *C) {
 	fname := filepath.Join(c.MkDir(), "mountinfo")
-	err := os.WriteFile(fname, []byte(mountInfoSample), 0644)
+	err := os.WriteFile(fname, []byte(mountInfoSample), 0o644)
 	c.Assert(err, IsNil)
 	entries, err := osutil.LoadMountInfo(fname)
 	c.Assert(err, IsNil)

@@ -26,7 +26,7 @@ import (
 
 	"github.com/canonical/x-go/strutil"
 
-	"github.com/canonical/pebble/internals/overlord/state"
+	"github.com/oktalz/pebble/internals/overlord/state"
 )
 
 // Ensure custom keys are in the form "example.com/path" (but somewhat more restrictive).

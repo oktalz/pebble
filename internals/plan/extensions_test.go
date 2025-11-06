@@ -24,7 +24,7 @@ import (
 	. "gopkg.in/check.v1"
 	"gopkg.in/yaml.v3"
 
-	"github.com/canonical/pebble/internals/plan"
+	"github.com/oktalz/pebble/internals/plan"
 )
 
 type inputLayer struct {
@@ -318,7 +318,7 @@ var extensionTests = []struct {
 	result: &planResult{
 		x: &xSection{
 			Entries: map[string]*X{
-				"x1": &X{
+				"x1": {
 					Name:     "x1",
 					Override: plan.ReplaceOverride,
 					A:        "a",
@@ -331,7 +331,7 @@ var extensionTests = []struct {
 		},
 		y: &ySection{
 			Entries: map[string]*Y{
-				"y1": &Y{
+				"y1": {
 					Name:     "y1",
 					Override: plan.ReplaceOverride,
 					A:        "a",
@@ -516,11 +516,11 @@ func (s *S) TestSectionOrderExt(c *C) {
 
 // writeLayerFiles writes layer files of a test to disk.
 func (s *S) writeLayerFiles(c *C, layersDir string, inputs []*inputLayer) {
-	err := os.MkdirAll(layersDir, 0755)
+	err := os.MkdirAll(layersDir, 0o755)
 	c.Assert(err, IsNil)
 
 	for _, input := range inputs {
-		err := os.WriteFile(filepath.Join(layersDir, fmt.Sprintf("%03d-%s.yaml", input.order, input.label)), reindent(input.yaml), 0644)
+		err := os.WriteFile(filepath.Join(layersDir, fmt.Sprintf("%03d-%s.yaml", input.order, input.label)), reindent(input.yaml), 0o644)
 		c.Assert(err, IsNil)
 	}
 }

@@ -19,7 +19,7 @@ import (
 
 	. "gopkg.in/check.v1"
 
-	"github.com/canonical/pebble/internals/overlord/pairingstate"
+	"github.com/oktalz/pebble/internals/overlord/pairingstate"
 )
 
 var schemaTests = []struct {
@@ -120,7 +120,6 @@ pairing:
 }}
 
 func (s *pairingSuite) TestPairingSectionExtensionSchema(c *C) {
-
 	for i, t := range schemaTests {
 		c.Logf("Running TestPairingSectionExtensionSchema %q test using test data index %d\n", t.summary, i)
 		combined, err := parseCombineLayers(t.layers)

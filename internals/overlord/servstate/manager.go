@@ -10,12 +10,12 @@ import (
 	"sync"
 	"time"
 
-	"github.com/canonical/pebble/internals/metrics"
-	"github.com/canonical/pebble/internals/overlord/restart"
-	"github.com/canonical/pebble/internals/overlord/state"
-	"github.com/canonical/pebble/internals/plan"
-	"github.com/canonical/pebble/internals/servicelog"
-	"github.com/canonical/pebble/internals/workloads"
+	"github.com/oktalz/pebble/internals/metrics"
+	"github.com/oktalz/pebble/internals/overlord/restart"
+	"github.com/oktalz/pebble/internals/overlord/state"
+	"github.com/oktalz/pebble/internals/plan"
+	"github.com/oktalz/pebble/internals/servicelog"
+	"github.com/oktalz/pebble/internals/workloads"
 )
 
 // timeNow can be faked during testing.

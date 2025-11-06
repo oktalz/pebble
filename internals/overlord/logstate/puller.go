@@ -19,8 +19,8 @@ import (
 
 	"gopkg.in/tomb.v2"
 
-	"github.com/canonical/pebble/internals/logger"
-	"github.com/canonical/pebble/internals/servicelog"
+	"github.com/oktalz/pebble/internals/logger"
+	"github.com/oktalz/pebble/internals/servicelog"
 )
 
 // logPuller handles pulling logs from a single iterator and sending to the

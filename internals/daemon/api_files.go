@@ -31,9 +31,9 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/canonical/pebble/internals/logger"
-	"github.com/canonical/pebble/internals/osutil"
-	"github.com/canonical/pebble/internals/osutil/sys"
+	"github.com/oktalz/pebble/internals/logger"
+	"github.com/oktalz/pebble/internals/osutil"
+	"github.com/oktalz/pebble/internals/osutil/sys"
 )
 
 const minBoundaryLength = 32

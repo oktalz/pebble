@@ -26,8 +26,8 @@ import (
 
 	. "gopkg.in/check.v1"
 
-	"github.com/canonical/pebble/internals/overlord/state"
-	"github.com/canonical/pebble/internals/testutil"
+	"github.com/oktalz/pebble/internals/overlord/state"
+	"github.com/oktalz/pebble/internals/testutil"
 )
 
 func TestState(t *testing.T) { TestingT(t) }
@@ -687,7 +687,6 @@ func (ss *stateSuite) TestCheckpointPreserveLastIds(c *C) {
 	c.Assert(st2.NewChange("install", "...").ID(), Equals, "2")
 
 	c.Assert(st2.NewLane(), Equals, 2)
-
 }
 
 func (ss *stateSuite) TestCheckpointPreserveCleanStatus(c *C) {

@@ -17,14 +17,16 @@ package cli
 import (
 	"github.com/canonical/go-flags"
 
-	"github.com/canonical/pebble/client"
+	"github.com/oktalz/pebble/client"
 )
 
-const cmdStartSummary = "Start a service and its dependencies"
-const cmdStartDescription = `
+const (
+	cmdStartSummary     = "Start a service and its dependencies"
+	cmdStartDescription = `
 The start command starts the service with the provided name and
 any other services it depends on, in the correct order.
 `
+)
 
 type cmdStart struct {
 	client *client.Client

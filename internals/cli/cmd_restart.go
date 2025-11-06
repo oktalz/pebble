@@ -17,13 +17,15 @@ package cli
 import (
 	"github.com/canonical/go-flags"
 
-	"github.com/canonical/pebble/client"
+	"github.com/oktalz/pebble/client"
 )
 
-const cmdRestartSummary = "Restart a service"
-const cmdRestartDescription = `
+const (
+	cmdRestartSummary     = "Restart a service"
+	cmdRestartDescription = `
 The restart command restarts the named service(s) in the correct order.
 `
+)
 
 type cmdRestart struct {
 	client *client.Client

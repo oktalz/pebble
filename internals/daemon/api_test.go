@@ -27,10 +27,10 @@ import (
 
 	"gopkg.in/check.v1"
 
-	"github.com/canonical/pebble/internals/overlord/pairingstate"
-	"github.com/canonical/pebble/internals/overlord/restart"
-	"github.com/canonical/pebble/internals/plan"
-	"github.com/canonical/pebble/internals/reaper"
+	"github.com/oktalz/pebble/internals/overlord/pairingstate"
+	"github.com/oktalz/pebble/internals/overlord/restart"
+	"github.com/oktalz/pebble/internals/plan"
+	"github.com/oktalz/pebble/internals/reaper"
 )
 
 var _ = check.Suite(&apiSuite{})

@@ -21,8 +21,8 @@ import (
 	"os/signal"
 	"time"
 
-	"github.com/canonical/pebble/client"
-	"github.com/canonical/pebble/internals/progress"
+	"github.com/oktalz/pebble/client"
+	"github.com/oktalz/pebble/internals/progress"
 )
 
 var (

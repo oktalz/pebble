@@ -20,9 +20,9 @@ import (
 
 	"gopkg.in/yaml.v3"
 
-	"github.com/canonical/pebble/internals/logger"
-	"github.com/canonical/pebble/internals/overlord/planstate"
-	"github.com/canonical/pebble/internals/plan"
+	"github.com/oktalz/pebble/internals/logger"
+	"github.com/oktalz/pebble/internals/overlord/planstate"
+	"github.com/oktalz/pebble/internals/plan"
 )
 
 func v1GetPlan(c *Command, r *http.Request, _ *UserState) Response {

@@ -22,12 +22,12 @@ import (
 
 	"gopkg.in/tomb.v2"
 
-	"github.com/canonical/pebble/cmd"
-	"github.com/canonical/pebble/internals/logger"
-	"github.com/canonical/pebble/internals/overlord/logstate/loki"
-	"github.com/canonical/pebble/internals/overlord/logstate/opentelemetry"
-	"github.com/canonical/pebble/internals/plan"
-	"github.com/canonical/pebble/internals/servicelog"
+	"github.com/oktalz/pebble/cmd"
+	"github.com/oktalz/pebble/internals/logger"
+	"github.com/oktalz/pebble/internals/overlord/logstate/loki"
+	"github.com/oktalz/pebble/internals/overlord/logstate/opentelemetry"
+	"github.com/oktalz/pebble/internals/plan"
+	"github.com/oktalz/pebble/internals/servicelog"
 )
 
 const (

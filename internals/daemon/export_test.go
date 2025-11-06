@@ -18,9 +18,9 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/canonical/pebble/internals/overlord"
-	"github.com/canonical/pebble/internals/overlord/checkstate"
-	"github.com/canonical/pebble/internals/overlord/state"
+	"github.com/oktalz/pebble/internals/overlord"
+	"github.com/oktalz/pebble/internals/overlord/checkstate"
+	"github.com/oktalz/pebble/internals/overlord/state"
 )
 
 func FakeMuxVars(f func(*http.Request) map[string]string) (restore func()) {

@@ -21,7 +21,7 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/canonical/pebble/internals/plan"
+	"github.com/oktalz/pebble/internals/plan"
 )
 
 // LabelExists is the error returned by AppendLayer when a layer with that

@@ -20,13 +20,15 @@ import (
 	"github.com/canonical/go-flags"
 	"gopkg.in/yaml.v3"
 
-	"github.com/canonical/pebble/client"
+	"github.com/oktalz/pebble/client"
 )
 
-const cmdIdentitySummary = "Show a single identity"
-const cmdIdentityDescription = `
+const (
+	cmdIdentitySummary     = "Show a single identity"
+	cmdIdentityDescription = `
 The identity command shows details for a single identity in YAML format.
 `
+)
 
 type cmdIdentity struct {
 	client *client.Client

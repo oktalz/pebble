@@ -23,9 +23,9 @@ import (
 
 	. "gopkg.in/check.v1"
 
-	"github.com/canonical/pebble/internals/overlord/state"
-	"github.com/canonical/pebble/internals/testutil"
-	"github.com/canonical/pebble/internals/timing"
+	"github.com/oktalz/pebble/internals/overlord/state"
+	"github.com/oktalz/pebble/internals/testutil"
+	"github.com/oktalz/pebble/internals/timing"
 )
 
 func Test(t *testing.T) { TestingT(t) }

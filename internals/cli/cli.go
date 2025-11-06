@@ -32,9 +32,9 @@ import (
 	"github.com/canonical/go-flags"
 	"golang.org/x/term"
 
-	"github.com/canonical/pebble/client"
-	"github.com/canonical/pebble/cmd"
-	"github.com/canonical/pebble/internals/logger"
+	"github.com/oktalz/pebble/client"
+	"github.com/oktalz/pebble/cmd"
+	"github.com/oktalz/pebble/internals/logger"
 )
 
 var (

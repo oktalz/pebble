@@ -19,11 +19,12 @@ import (
 
 	"github.com/canonical/go-flags"
 
-	"github.com/canonical/pebble/client"
+	"github.com/oktalz/pebble/client"
 )
 
-const cmdRemoveIdentitiesSummary = "Remove identities"
-const cmdRemoveIdentitiesDescription = `
+const (
+	cmdRemoveIdentitiesSummary     = "Remove identities"
+	cmdRemoveIdentitiesDescription = `
 The remove-identities command removes one or more identities.
 
 The named identities must exist. The named identity entries must be null in
@@ -33,6 +34,7 @@ the YAML input. For example, to remove "alice" and "bob", use this YAML:
 >     alice: null
 >     bob: null
 `
+)
 
 type cmdRemoveIdentities struct {
 	client *client.Client

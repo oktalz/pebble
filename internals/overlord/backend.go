@@ -17,7 +17,7 @@ package overlord
 import (
 	"time"
 
-	"github.com/canonical/pebble/internals/osutil"
+	"github.com/oktalz/pebble/internals/osutil"
 )
 
 type overlordStateBackend struct {
@@ -26,7 +26,7 @@ type overlordStateBackend struct {
 }
 
 func (osb *overlordStateBackend) Checkpoint(data []byte) error {
-	return osutil.AtomicWriteFile(osb.path, data, 0600, 0)
+	return osutil.AtomicWriteFile(osb.path, data, 0o600, 0)
 }
 
 func (osb *overlordStateBackend) EnsureBefore(d time.Duration) {

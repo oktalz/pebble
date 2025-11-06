@@ -19,9 +19,9 @@ import (
 
 	"github.com/canonical/x-go/strutil"
 
-	"github.com/canonical/pebble/internals/logger"
-	"github.com/canonical/pebble/internals/overlord/checkstate"
-	"github.com/canonical/pebble/internals/plan"
+	"github.com/oktalz/pebble/internals/logger"
+	"github.com/oktalz/pebble/internals/overlord/checkstate"
+	"github.com/oktalz/pebble/internals/plan"
 )
 
 type healthInfo struct {

@@ -22,9 +22,9 @@ import (
 
 	tombpkg "gopkg.in/tomb.v2"
 
-	"github.com/canonical/pebble/internals/logger"
-	"github.com/canonical/pebble/internals/overlord/state"
-	"github.com/canonical/pebble/internals/plan"
+	"github.com/oktalz/pebble/internals/logger"
+	"github.com/oktalz/pebble/internals/overlord/state"
+	"github.com/oktalz/pebble/internals/plan"
 )
 
 func (m *CheckManager) doPerformCheck(task *state.Task, tomb *tombpkg.Tomb) error {

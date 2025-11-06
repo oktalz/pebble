@@ -20,7 +20,7 @@ import (
 
 	"gopkg.in/yaml.v3"
 
-	"github.com/canonical/pebble/internals/plan"
+	"github.com/oktalz/pebble/internals/plan"
 )
 
 var _ plan.SectionExtension = (*SectionExtension)(nil)

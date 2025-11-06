@@ -28,7 +28,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/canonical/pebble/internals/servicelog"
+	"github.com/oktalz/pebble/internals/servicelog"
 )
 
 var pebbleBin = flag.String("pebblebin", "", "Path to the pre-built Pebble binary")

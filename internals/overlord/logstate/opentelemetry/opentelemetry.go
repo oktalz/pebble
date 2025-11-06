@@ -26,8 +26,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/canonical/pebble/internals/logger"
-	"github.com/canonical/pebble/internals/servicelog"
+	"github.com/oktalz/pebble/internals/logger"
+	"github.com/oktalz/pebble/internals/servicelog"
 )
 
 const (

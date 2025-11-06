@@ -17,7 +17,7 @@ package client_test
 import (
 	"log"
 
-	"github.com/canonical/pebble/client"
+	"github.com/oktalz/pebble/client"
 )
 
 var runExample = false // example won't actually be run, just type-checked

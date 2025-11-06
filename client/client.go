@@ -35,7 +35,7 @@ import (
 
 	"github.com/gorilla/websocket"
 
-	"github.com/canonical/pebble/internals/wsutil"
+	"github.com/oktalz/pebble/internals/wsutil"
 )
 
 type Requester interface {

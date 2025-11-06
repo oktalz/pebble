@@ -22,7 +22,7 @@ import (
 	. "gopkg.in/check.v1"
 	"gopkg.in/yaml.v3"
 
-	"github.com/canonical/pebble/internals/logger"
+	"github.com/oktalz/pebble/internals/logger"
 )
 
 var planLayer = `
@@ -35,7 +35,7 @@ services:
 `
 
 func (s *apiSuite) TestGetPlanErrors(c *C) {
-	var tests = []struct {
+	tests := []struct {
 		url     string
 		status  int
 		message string
@@ -99,7 +99,7 @@ func (s *apiSuite) planLayersHasLen(c *C, expectedLen int) {
 }
 
 func (s *apiSuite) TestLayersErrors(c *C) {
-	var tests = []struct {
+	tests := []struct {
 		payload string
 		status  int
 		message string

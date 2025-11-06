@@ -19,14 +19,16 @@ import (
 
 	"github.com/canonical/go-flags"
 
-	"github.com/canonical/pebble/client"
-	version "github.com/canonical/pebble/cmd"
+	"github.com/oktalz/pebble/client"
+	version "github.com/oktalz/pebble/cmd"
 )
 
-const cmdVersionSummary = "Show version details"
-const cmdVersionDescription = `
+const (
+	cmdVersionSummary     = "Show version details"
+	cmdVersionDescription = `
 The version command displays the versions of the running client and server.
 `
+)
 
 type cmdVersion struct {
 	client *client.Client

@@ -27,7 +27,7 @@ import (
 
 	"gopkg.in/check.v1"
 
-	"github.com/canonical/pebble/internals/cli"
+	"github.com/oktalz/pebble/internals/cli"
 )
 
 func (s *PebbleSuite) TestChangesExtraArgs(c *check.C) {

@@ -21,8 +21,8 @@ import (
 
 	. "gopkg.in/check.v1"
 
-	"github.com/canonical/pebble/internals/logger"
-	"github.com/canonical/pebble/internals/overlord/state"
+	"github.com/oktalz/pebble/internals/logger"
+	"github.com/oktalz/pebble/internals/overlord/state"
 )
 
 func (s *apiSuite) TestIdentities(c *C) {

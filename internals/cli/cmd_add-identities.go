@@ -23,11 +23,12 @@ import (
 	"github.com/canonical/go-flags"
 	"gopkg.in/yaml.v3"
 
-	"github.com/canonical/pebble/client"
+	"github.com/oktalz/pebble/client"
 )
 
-const cmdAddIdentitiesSummary = "Add new identities"
-const cmdAddIdentitiesDescription = `
+const (
+	cmdAddIdentitiesSummary     = "Add new identities"
+	cmdAddIdentitiesDescription = `
 The add-identities command adds one or more new identities.
 
 The named identities must not yet exist.
@@ -50,6 +51,7 @@ To add an identity named "alice" with metrics access using HTTP basic authentica
 
 Use "openssl passwd -6" to generate a hashed password (sha512-crypt format).
 `
+)
 
 type cmdAddIdentities struct {
 	client *client.Client

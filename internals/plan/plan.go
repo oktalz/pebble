@@ -29,8 +29,8 @@ import (
 	"github.com/canonical/x-go/strutil/shlex"
 	"gopkg.in/yaml.v3"
 
-	"github.com/canonical/pebble/internals/logger"
-	"github.com/canonical/pebble/internals/osutil"
+	"github.com/oktalz/pebble/internals/logger"
+	"github.com/oktalz/pebble/internals/osutil"
 )
 
 // SectionExtension allows the plan layer schema to be extended without

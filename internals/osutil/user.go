@@ -22,7 +22,7 @@ import (
 	"strings"
 	"syscall"
 
-	"github.com/canonical/pebble/internals/osutil/sys"
+	"github.com/oktalz/pebble/internals/osutil/sys"
 )
 
 var (

@@ -24,7 +24,7 @@ import (
 
 	"gopkg.in/check.v1"
 
-	"github.com/canonical/pebble/client"
+	"github.com/oktalz/pebble/client"
 )
 
 func (cs *clientSuite) TestLogsNoOptions(c *check.C) {

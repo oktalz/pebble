@@ -21,9 +21,9 @@ import (
 	. "gopkg.in/check.v1"
 	"gopkg.in/yaml.v3"
 
-	"github.com/canonical/pebble/internals/overlord/planstate"
-	"github.com/canonical/pebble/internals/plan"
-	"github.com/canonical/pebble/internals/workloads"
+	"github.com/oktalz/pebble/internals/overlord/planstate"
+	"github.com/oktalz/pebble/internals/plan"
+	"github.com/oktalz/pebble/internals/workloads"
 )
 
 func (ps *planSuite) TestLoadInvalidPebbleDir(c *C) {

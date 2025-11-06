@@ -19,8 +19,8 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/canonical/pebble/internals/logger"
-	"github.com/canonical/pebble/internals/overlord/state"
+	"github.com/oktalz/pebble/internals/logger"
+	"github.com/oktalz/pebble/internals/overlord/state"
 )
 
 type changeInfo struct {

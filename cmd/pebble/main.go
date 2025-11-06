@@ -18,7 +18,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/canonical/pebble/internals/cli"
+	"github.com/oktalz/pebble/internals/cli"
 )
 
 func main() {

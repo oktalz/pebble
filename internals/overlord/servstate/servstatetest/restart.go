@@ -15,8 +15,8 @@
 package servstatetest
 
 import (
-	"github.com/canonical/pebble/internals/overlord/restart"
-	"github.com/canonical/pebble/internals/overlord/state"
+	"github.com/oktalz/pebble/internals/overlord/restart"
+	"github.com/oktalz/pebble/internals/overlord/state"
 )
 
 // FakeRestartHandler fakes a restart.Handler based on a function

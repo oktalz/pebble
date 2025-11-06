@@ -30,12 +30,12 @@ import (
 
 	. "gopkg.in/check.v1"
 
-	"github.com/canonical/pebble/client"
-	"github.com/canonical/pebble/internals/logger"
-	"github.com/canonical/pebble/internals/overlord/pairingstate"
-	"github.com/canonical/pebble/internals/overlord/state"
-	"github.com/canonical/pebble/internals/plan"
-	"github.com/canonical/pebble/internals/reaper"
+	"github.com/oktalz/pebble/client"
+	"github.com/oktalz/pebble/internals/logger"
+	"github.com/oktalz/pebble/internals/overlord/pairingstate"
+	"github.com/oktalz/pebble/internals/overlord/state"
+	"github.com/oktalz/pebble/internals/plan"
+	"github.com/oktalz/pebble/internals/reaper"
 )
 
 var _ = Suite(&execSuite{})

@@ -17,7 +17,7 @@ package daemon
 import (
 	"net/http"
 
-	"github.com/canonical/pebble/internals/overlord/state"
+	"github.com/oktalz/pebble/internals/overlord/state"
 )
 
 const (

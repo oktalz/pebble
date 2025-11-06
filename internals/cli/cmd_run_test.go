@@ -21,16 +21,16 @@ import (
 
 	. "gopkg.in/check.v1"
 
-	"github.com/canonical/pebble/internals/cli"
+	"github.com/oktalz/pebble/internals/cli"
 )
 
 func (s *PebbleSuite) TestMaybeCopyPebbleDir(c *C) {
 	src := c.MkDir()
-	err := os.MkdirAll(path.Join(src, "a", "b", "c"), 0700)
+	err := os.MkdirAll(path.Join(src, "a", "b", "c"), 0o700)
 	c.Assert(err, IsNil)
-	err = os.WriteFile(path.Join(src, "a", "b", "c", "a.yaml"), []byte("# hi\n"), 0666)
+	err = os.WriteFile(path.Join(src, "a", "b", "c", "a.yaml"), []byte("# hi\n"), 0o666)
 	c.Assert(err, IsNil)
-	err = os.WriteFile(path.Join(src, "a.yaml"), []byte("# bye\n"), 0666)
+	err = os.WriteFile(path.Join(src, "a.yaml"), []byte("# bye\n"), 0o666)
 	c.Assert(err, IsNil)
 
 	dst := c.MkDir()
@@ -68,15 +68,15 @@ func (s *PebbleSuite) TestMaybeCopyPebbleDir(c *C) {
 
 func (s *PebbleSuite) TestMaybeCopyPebbleDirNoCopy(c *C) {
 	src := c.MkDir()
-	err := os.MkdirAll(path.Join(src, "a", "b", "c"), 0700)
+	err := os.MkdirAll(path.Join(src, "a", "b", "c"), 0o700)
 	c.Assert(err, IsNil)
-	err = os.WriteFile(path.Join(src, "a", "b", "c", "a.yaml"), []byte("# hi\n"), 0666)
+	err = os.WriteFile(path.Join(src, "a", "b", "c", "a.yaml"), []byte("# hi\n"), 0o666)
 	c.Assert(err, IsNil)
-	err = os.WriteFile(path.Join(src, "a.yaml"), []byte("# bye\n"), 0666)
+	err = os.WriteFile(path.Join(src, "a.yaml"), []byte("# bye\n"), 0o666)
 	c.Assert(err, IsNil)
 
 	dst := c.MkDir()
-	err = os.WriteFile(path.Join(dst, "a.yaml"), []byte("# no\n"), 0666)
+	err = os.WriteFile(path.Join(dst, "a.yaml"), []byte("# no\n"), 0o666)
 	c.Assert(err, IsNil)
 
 	err = cli.MaybeCopyPebbleDir(dst, src)

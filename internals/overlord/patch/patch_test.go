@@ -26,8 +26,8 @@ import (
 
 	. "gopkg.in/check.v1"
 
-	"github.com/canonical/pebble/internals/overlord/patch"
-	"github.com/canonical/pebble/internals/overlord/state"
+	"github.com/oktalz/pebble/internals/overlord/patch"
+	"github.com/oktalz/pebble/internals/overlord/state"
 )
 
 func Test(t *testing.T) { TestingT(t) }

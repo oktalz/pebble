@@ -17,7 +17,7 @@ package overlord
 import (
 	"gopkg.in/tomb.v2"
 
-	"github.com/canonical/pebble/internals/overlord/state"
+	"github.com/oktalz/pebble/internals/overlord/state"
 )
 
 func handleUnknownTask(task *state.Task, tomb *tomb.Tomb) error {

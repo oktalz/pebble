@@ -23,10 +23,10 @@ import (
 
 	. "gopkg.in/check.v1"
 
-	"github.com/canonical/pebble/internals/overlord/restart"
-	"github.com/canonical/pebble/internals/overlord/servstate/servstatetest"
-	"github.com/canonical/pebble/internals/overlord/standby"
-	"github.com/canonical/pebble/internals/overlord/state"
+	"github.com/oktalz/pebble/internals/overlord/restart"
+	"github.com/oktalz/pebble/internals/overlord/servstate/servstatetest"
+	"github.com/oktalz/pebble/internals/overlord/standby"
+	"github.com/oktalz/pebble/internals/overlord/state"
 )
 
 // Hook up v1 into the "go test" runner

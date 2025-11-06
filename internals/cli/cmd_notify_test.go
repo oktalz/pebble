@@ -22,7 +22,7 @@ import (
 
 	. "gopkg.in/check.v1"
 
-	"github.com/canonical/pebble/internals/cli"
+	"github.com/oktalz/pebble/internals/cli"
 )
 
 func (s *PebbleSuite) TestNotifyBasic(c *C) {
@@ -84,7 +84,8 @@ func (s *PebbleSuite) TestNotifyData(c *C) {
 	})
 
 	rest, err := cli.ParserForTest().ParseArgs([]string{
-		"notify", "--repeat-after=1h", "a.b/c", "k=v", "foo=bar bazz"})
+		"notify", "--repeat-after=1h", "a.b/c", "k=v", "foo=bar bazz",
+	})
 	c.Assert(err, IsNil)
 	c.Check(rest, HasLen, 0)
 	c.Check(s.Stdout(), Equals, "Recorded notice 42\n")

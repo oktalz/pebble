@@ -19,16 +19,18 @@ import (
 
 	"github.com/canonical/go-flags"
 
-	cmdpkg "github.com/canonical/pebble/cmd"
+	cmdpkg "github.com/oktalz/pebble/cmd"
 )
 
-const cmdOkaySummary = "Acknowledge notices and warnings"
-const cmdOkayDescription = `
+const (
+	cmdOkaySummary     = "Acknowledge notices and warnings"
+	cmdOkayDescription = `
 The okay command acknowledges warnings and notices that have been previously
 listed using '{{.ProgramName}} warnings' or '{{.ProgramName}} notices', so that they are omitted
 from future runs of either command. When a notice or warning is repeated, it
 will again show up until the next '{{.ProgramName}} okay'.
 `
+)
 
 type cmdOkay struct {
 	socketPath string

@@ -136,8 +136,8 @@ import (
 	"github.com/gorilla/mux"
 	. "gopkg.in/check.v1"
 
-	"github.com/canonical/pebble/internals/systemd"
-	"github.com/canonical/pebble/internals/testutil"
+	"github.com/oktalz/pebble/internals/systemd"
+	"github.com/oktalz/pebble/internals/testutil"
 )
 ```
 

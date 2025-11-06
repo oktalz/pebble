@@ -15,7 +15,7 @@
 package progresstest
 
 import (
-	"github.com/canonical/pebble/internals/progress"
+	"github.com/oktalz/pebble/internals/progress"
 )
 
 type Meter struct {

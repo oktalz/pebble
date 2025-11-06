@@ -29,14 +29,14 @@ import (
 
 	. "gopkg.in/check.v1"
 
-	"github.com/canonical/pebble/internals/logger"
-	"github.com/canonical/pebble/internals/metrics"
-	"github.com/canonical/pebble/internals/overlord"
-	"github.com/canonical/pebble/internals/overlord/checkstate"
-	"github.com/canonical/pebble/internals/overlord/planstate"
-	"github.com/canonical/pebble/internals/overlord/state"
-	"github.com/canonical/pebble/internals/plan"
-	"github.com/canonical/pebble/internals/reaper"
+	"github.com/oktalz/pebble/internals/logger"
+	"github.com/oktalz/pebble/internals/metrics"
+	"github.com/oktalz/pebble/internals/overlord"
+	"github.com/oktalz/pebble/internals/overlord/checkstate"
+	"github.com/oktalz/pebble/internals/overlord/planstate"
+	"github.com/oktalz/pebble/internals/overlord/state"
+	"github.com/oktalz/pebble/internals/plan"
+	"github.com/oktalz/pebble/internals/reaper"
 )
 
 func Test(t *testing.T) {
@@ -66,7 +66,7 @@ func (s *ManagerSuite) SetUpTest(c *C) {
 
 	s.overlord = overlord.Fake()
 	layersDir := filepath.Join(c.MkDir(), "layers")
-	err = os.Mkdir(layersDir, 0755)
+	err = os.Mkdir(layersDir, 0o755)
 	c.Assert(err, IsNil)
 	s.planMgr, err = planstate.NewManager(layersDir)
 	c.Assert(err, IsNil)

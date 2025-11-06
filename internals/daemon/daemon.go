@@ -38,17 +38,17 @@ import (
 	"github.com/gorilla/mux"
 	"gopkg.in/tomb.v2"
 
-	"github.com/canonical/pebble/internals/logger"
-	"github.com/canonical/pebble/internals/osutil"
-	"github.com/canonical/pebble/internals/overlord"
-	"github.com/canonical/pebble/internals/overlord/checkstate"
-	"github.com/canonical/pebble/internals/overlord/restart"
-	"github.com/canonical/pebble/internals/overlord/servstate"
-	"github.com/canonical/pebble/internals/overlord/standby"
-	"github.com/canonical/pebble/internals/overlord/state"
-	"github.com/canonical/pebble/internals/overlord/tlsstate"
-	"github.com/canonical/pebble/internals/reaper"
-	"github.com/canonical/pebble/internals/systemd"
+	"github.com/oktalz/pebble/internals/logger"
+	"github.com/oktalz/pebble/internals/osutil"
+	"github.com/oktalz/pebble/internals/overlord"
+	"github.com/oktalz/pebble/internals/overlord/checkstate"
+	"github.com/oktalz/pebble/internals/overlord/restart"
+	"github.com/oktalz/pebble/internals/overlord/servstate"
+	"github.com/oktalz/pebble/internals/overlord/standby"
+	"github.com/oktalz/pebble/internals/overlord/state"
+	"github.com/oktalz/pebble/internals/overlord/tlsstate"
+	"github.com/oktalz/pebble/internals/reaper"
+	"github.com/oktalz/pebble/internals/systemd"
 )
 
 var (
@@ -1056,7 +1056,7 @@ func getListener(socketPath string, listenerMap map[string]net.Listener) (net.Li
 	}
 
 	runtime.LockOSThread()
-	oldmask := syscall.Umask(0111)
+	oldmask := syscall.Umask(0o111)
 	listener, err := net.ListenUnix("unix", address)
 	syscall.Umask(oldmask)
 	runtime.UnlockOSThread()

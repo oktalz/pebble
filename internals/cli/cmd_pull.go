@@ -19,14 +19,16 @@ import (
 
 	"github.com/canonical/go-flags"
 
-	"github.com/canonical/pebble/client"
-	"github.com/canonical/pebble/internals/logger"
+	"github.com/oktalz/pebble/client"
+	"github.com/oktalz/pebble/internals/logger"
 )
 
-const cmdPullSummary = "Retrieve a file from the remote system"
-const cmdPullDescription = `
+const (
+	cmdPullSummary     = "Retrieve a file from the remote system"
+	cmdPullDescription = `
 The pull command retrieves a file from the remote system.
 `
+)
 
 type cmdPull struct {
 	client *client.Client

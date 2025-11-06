@@ -20,7 +20,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/canonical/pebble/internals/osutil"
+	"github.com/oktalz/pebble/internals/osutil"
 )
 
 var osGetenv = os.Getenv

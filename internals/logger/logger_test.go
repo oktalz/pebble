@@ -24,7 +24,7 @@ import (
 	. "gopkg.in/check.v1"
 	"gopkg.in/tomb.v2"
 
-	"github.com/canonical/pebble/internals/logger"
+	"github.com/oktalz/pebble/internals/logger"
 )
 
 // Hook up check.v1 into the "go test" runner

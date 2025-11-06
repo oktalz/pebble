@@ -19,14 +19,16 @@ import (
 
 	"github.com/canonical/go-flags"
 
-	"github.com/canonical/pebble/client"
+	"github.com/oktalz/pebble/client"
 )
 
-const cmdServicesSummary = "Query the status of configured services"
-const cmdServicesDescription = `
+const (
+	cmdServicesSummary     = "Query the status of configured services"
+	cmdServicesDescription = `
 The services command lists status information about the services specified, or
 about all services if none are specified.
 `
+)
 
 type cmdServices struct {
 	client *client.Client

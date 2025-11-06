@@ -21,8 +21,8 @@ import (
 	. "gopkg.in/check.v1"
 	"gopkg.in/yaml.v3"
 
-	"github.com/canonical/pebble/internals/plan"
-	"github.com/canonical/pebble/internals/workloads"
+	"github.com/oktalz/pebble/internals/plan"
+	"github.com/oktalz/pebble/internals/workloads"
 )
 
 var schemaTests = []struct {
@@ -130,7 +130,8 @@ workloads:
     `,
 }, {
 	summary: "override replace policy",
-	layers: []string{`
+	layers: []string{
+		`
 workloads:
     default:
         override: replace

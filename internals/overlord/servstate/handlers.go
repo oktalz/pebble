@@ -16,15 +16,15 @@ import (
 	"golang.org/x/sys/unix"
 	"gopkg.in/tomb.v2"
 
-	"github.com/canonical/pebble/internals/logger"
-	"github.com/canonical/pebble/internals/metrics"
-	"github.com/canonical/pebble/internals/osutil"
-	"github.com/canonical/pebble/internals/overlord/restart"
-	"github.com/canonical/pebble/internals/overlord/state"
-	"github.com/canonical/pebble/internals/plan"
-	"github.com/canonical/pebble/internals/reaper"
-	"github.com/canonical/pebble/internals/servicelog"
-	"github.com/canonical/pebble/internals/workloads"
+	"github.com/oktalz/pebble/internals/logger"
+	"github.com/oktalz/pebble/internals/metrics"
+	"github.com/oktalz/pebble/internals/osutil"
+	"github.com/oktalz/pebble/internals/overlord/restart"
+	"github.com/oktalz/pebble/internals/overlord/state"
+	"github.com/oktalz/pebble/internals/plan"
+	"github.com/oktalz/pebble/internals/reaper"
+	"github.com/oktalz/pebble/internals/servicelog"
+	"github.com/oktalz/pebble/internals/workloads"
 )
 
 // TaskServiceRequest extracts the *ServiceRequest that was associated

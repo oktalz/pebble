@@ -26,21 +26,22 @@ import (
 
 	"github.com/canonical/go-flags"
 
-	"github.com/canonical/pebble/client"
-	"github.com/canonical/pebble/cmd"
-	"github.com/canonical/pebble/internals/daemon"
-	"github.com/canonical/pebble/internals/idkey"
-	"github.com/canonical/pebble/internals/logger"
-	"github.com/canonical/pebble/internals/overlord"
-	"github.com/canonical/pebble/internals/overlord/pairingstate"
-	"github.com/canonical/pebble/internals/plan"
-	"github.com/canonical/pebble/internals/reaper"
-	"github.com/canonical/pebble/internals/systemd"
-	"github.com/canonical/pebble/internals/workloads"
+	"github.com/oktalz/pebble/client"
+	"github.com/oktalz/pebble/cmd"
+	"github.com/oktalz/pebble/internals/daemon"
+	"github.com/oktalz/pebble/internals/idkey"
+	"github.com/oktalz/pebble/internals/logger"
+	"github.com/oktalz/pebble/internals/overlord"
+	"github.com/oktalz/pebble/internals/overlord/pairingstate"
+	"github.com/oktalz/pebble/internals/plan"
+	"github.com/oktalz/pebble/internals/reaper"
+	"github.com/oktalz/pebble/internals/systemd"
+	"github.com/oktalz/pebble/internals/workloads"
 )
 
-const cmdRunSummary = "Run the service manager environment"
-const cmdRunDescription = `
+const (
+	cmdRunSummary     = "Run the service manager environment"
+	cmdRunDescription = `
 The run command starts {{.DisplayName}} and runs the configured environment.
 
 Additional arguments may be provided to the service command with the --args
@@ -50,6 +51,7 @@ replace any default arguments defined in the service plan. For example:
 
 {{.ProgramName}} run --args myservice --port 8080 \; --hold
 `
+)
 
 type sharedRunEnterOpts struct {
 	CreateDirs bool       `long:"create-dirs"`

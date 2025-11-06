@@ -20,8 +20,8 @@ import (
 
 	. "gopkg.in/check.v1"
 
-	"github.com/canonical/pebble/internals/overlord/pairingstate"
-	"github.com/canonical/pebble/internals/overlord/state"
+	"github.com/oktalz/pebble/internals/overlord/pairingstate"
+	"github.com/oktalz/pebble/internals/overlord/state"
 )
 
 // testWindowDuration is a carefully selected pairing window duration that is

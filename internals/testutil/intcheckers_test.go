@@ -17,7 +17,7 @@ package testutil_test
 import (
 	"gopkg.in/check.v1"
 
-	. "github.com/canonical/pebble/internals/testutil"
+	. "github.com/oktalz/pebble/internals/testutil"
 )
 
 type intCheckersSuite struct{}

@@ -20,15 +20,17 @@ import (
 
 	"github.com/canonical/go-flags"
 
-	"github.com/canonical/pebble/client"
+	"github.com/oktalz/pebble/client"
 )
 
-const cmdStartChecksSummary = "Start one or more checks"
-const cmdStartChecksDescription = `
+const (
+	cmdStartChecksSummary     = "Start one or more checks"
+	cmdStartChecksDescription = `
 The start-checks command starts the configured health checks provided as
 positional arguments. For any checks that are already active, the command
 has no effect.
 `
+)
 
 type cmdStartChecks struct {
 	client *client.Client

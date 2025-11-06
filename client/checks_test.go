@@ -20,7 +20,7 @@ import (
 
 	"gopkg.in/check.v1"
 
-	"github.com/canonical/pebble/client"
+	"github.com/oktalz/pebble/client"
 )
 
 func (cs *clientSuite) TestChecksGet(c *check.C) {
@@ -83,7 +83,6 @@ func (cs *clientSuite) TestStartChecks(c *check.C) {
 	c.Check(body, check.HasLen, 2)
 	c.Check(body["action"], check.Equals, "start")
 	c.Check(body["checks"], check.DeepEquals, []any{"chk1", "chk2"})
-
 }
 
 func (cs *clientSuite) TestStopChecks(c *check.C) {

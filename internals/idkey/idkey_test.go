@@ -23,7 +23,7 @@ import (
 
 	. "gopkg.in/check.v1"
 
-	"github.com/canonical/pebble/internals/idkey"
+	"github.com/oktalz/pebble/internals/idkey"
 )
 
 // TestNoDirectory checks if leaf directory creation works.

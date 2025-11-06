@@ -34,17 +34,17 @@ import (
 	"golang.org/x/sys/unix"
 	. "gopkg.in/check.v1"
 
-	"github.com/canonical/pebble/internals/logger"
-	"github.com/canonical/pebble/internals/metrics"
-	"github.com/canonical/pebble/internals/overlord/checkstate"
-	"github.com/canonical/pebble/internals/overlord/restart"
-	"github.com/canonical/pebble/internals/overlord/servstate"
-	"github.com/canonical/pebble/internals/overlord/state"
-	"github.com/canonical/pebble/internals/plan"
-	"github.com/canonical/pebble/internals/reaper"
-	"github.com/canonical/pebble/internals/servicelog"
-	"github.com/canonical/pebble/internals/testutil"
-	"github.com/canonical/pebble/internals/workloads"
+	"github.com/oktalz/pebble/internals/logger"
+	"github.com/oktalz/pebble/internals/metrics"
+	"github.com/oktalz/pebble/internals/overlord/checkstate"
+	"github.com/oktalz/pebble/internals/overlord/restart"
+	"github.com/oktalz/pebble/internals/overlord/servstate"
+	"github.com/oktalz/pebble/internals/overlord/state"
+	"github.com/oktalz/pebble/internals/plan"
+	"github.com/oktalz/pebble/internals/reaper"
+	"github.com/oktalz/pebble/internals/servicelog"
+	"github.com/oktalz/pebble/internals/testutil"
+	"github.com/oktalz/pebble/internals/workloads"
 )
 
 const (
@@ -442,7 +442,7 @@ workloads:
 	stops, starts, err := s.manager.Replan()
 	c.Assert(err, IsNil)
 	c.Check(stops, DeepEquals, [][]string{nil})
-	c.Check(starts, DeepEquals, [][]string{[]string{"test1", "test2"}, []string{"test6"}})
+	c.Check(starts, DeepEquals, [][]string{{"test1", "test2"}, {"test6"}})
 
 	resetWorkloadsSectionExtension()
 	s.planAddLayer(c, `
@@ -461,7 +461,7 @@ workloads:
 	stops, starts, err = s.manager.Replan()
 	c.Assert(err, IsNil)
 	c.Check(stops, DeepEquals, [][]string{nil})
-	c.Check(starts, DeepEquals, [][]string{[]string{"test1", "test2"}, []string{"test6"}})
+	c.Check(starts, DeepEquals, [][]string{{"test1", "test2"}, {"test6"}})
 
 	resetWorkloadsSectionExtension()
 	s.planAddLayer(c, `
@@ -474,7 +474,7 @@ workloads:
 	stops, starts, err = s.manager.Replan()
 	c.Assert(err, IsNil)
 	c.Check(stops, DeepEquals, [][]string{nil})
-	c.Check(starts, DeepEquals, [][]string{[]string{"test1", "test2"}, []string{"test6"}})
+	c.Check(starts, DeepEquals, [][]string{{"test1", "test2"}, {"test6"}})
 	s.stopTestServices(c)
 }
 
@@ -707,7 +707,7 @@ services:
 
 func (s *S) TestStartFastExitCommand(c *C) {
 	s.newServiceManager(c)
-	var layer = `
+	layer := `
 services:
     test4:
         override: replace
@@ -732,7 +732,7 @@ services:
 
 func (s *S) TestStartFastExitCommandOnFailureIgnore(c *C) {
 	s.newServiceManager(c)
-	var layer = `
+	layer := `
 services:
     test1:
         override: replace
@@ -1676,7 +1676,7 @@ zombi:
 	}
 
 	// Wait till the child terminates (test2 exits)
-	fd, err := os.OpenFile(exitChildPath, os.O_RDONLY|os.O_CREATE, 0666)
+	fd, err := os.OpenFile(exitChildPath, os.O_RDONLY|os.O_CREATE, 0o666)
 	c.Assert(err, IsNil)
 	fd.Close()
 	s.waitUntilService(c, "test2", func(svc *servstate.ServiceInfo) bool {

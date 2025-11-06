@@ -27,7 +27,7 @@ import (
 
 	. "gopkg.in/check.v1"
 
-	"github.com/canonical/pebble/internals/logger"
+	"github.com/oktalz/pebble/internals/logger"
 )
 
 func (s *apiSuite) TestChecksGet(c *C) {

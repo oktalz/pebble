@@ -17,14 +17,16 @@ package cli
 import (
 	"github.com/canonical/go-flags"
 
-	"github.com/canonical/pebble/client"
+	"github.com/oktalz/pebble/client"
 )
 
-const cmdStopSummary = "Stop a service and its dependents"
-const cmdStopDescription = `
+const (
+	cmdStopSummary     = "Stop a service and its dependents"
+	cmdStopDescription = `
 The stop command stops the service with the provided name and
 any other service that depends on it, in the correct order.
 `
+)
 
 type cmdStop struct {
 	client *client.Client

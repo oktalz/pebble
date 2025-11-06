@@ -35,7 +35,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/canonical/pebble/cmd"
+	"github.com/oktalz/pebble/cmd"
 )
 
 var (

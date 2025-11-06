@@ -23,7 +23,7 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/canonical/pebble/internals/osutil/sys"
+	"github.com/oktalz/pebble/internals/osutil/sys"
 )
 
 func FakeUserCurrent(f func() (*user.User, error)) func() {
@@ -66,7 +66,7 @@ func FakeMountInfo(text string) (restore func()) {
 	if err != nil {
 		panic(fmt.Errorf("cannot open temporary file: %s", err))
 	}
-	if err := os.WriteFile(f.Name(), []byte(text), 0644); err != nil {
+	if err := os.WriteFile(f.Name(), []byte(text), 0o644); err != nil {
 		panic(fmt.Errorf("cannot write mock mountinfo file: %s", err))
 	}
 	procSelfMountInfo = f.Name()

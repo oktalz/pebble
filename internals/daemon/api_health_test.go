@@ -25,10 +25,10 @@ import (
 
 	. "gopkg.in/check.v1"
 
-	"github.com/canonical/pebble/client"
-	"github.com/canonical/pebble/internals/overlord"
-	"github.com/canonical/pebble/internals/overlord/checkstate"
-	"github.com/canonical/pebble/internals/plan"
+	"github.com/oktalz/pebble/client"
+	"github.com/oktalz/pebble/internals/overlord"
+	"github.com/oktalz/pebble/internals/overlord/checkstate"
+	"github.com/oktalz/pebble/internals/plan"
 )
 
 var _ = Suite(&healthSuite{})

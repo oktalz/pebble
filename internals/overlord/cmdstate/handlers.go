@@ -31,12 +31,12 @@ import (
 	"golang.org/x/sys/unix"
 	"gopkg.in/tomb.v2"
 
-	"github.com/canonical/pebble/internals/logger"
-	"github.com/canonical/pebble/internals/osutil"
-	"github.com/canonical/pebble/internals/overlord/state"
-	"github.com/canonical/pebble/internals/ptyutil"
-	"github.com/canonical/pebble/internals/reaper"
-	"github.com/canonical/pebble/internals/wsutil"
+	"github.com/oktalz/pebble/internals/logger"
+	"github.com/oktalz/pebble/internals/osutil"
+	"github.com/oktalz/pebble/internals/overlord/state"
+	"github.com/oktalz/pebble/internals/ptyutil"
+	"github.com/oktalz/pebble/internals/reaper"
+	"github.com/oktalz/pebble/internals/wsutil"
 )
 
 const (

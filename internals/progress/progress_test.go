@@ -21,15 +21,14 @@ import (
 
 	. "gopkg.in/check.v1"
 
-	"github.com/canonical/pebble/internals/progress"
-	"github.com/canonical/pebble/internals/progress/progresstest"
+	"github.com/oktalz/pebble/internals/progress"
+	"github.com/oktalz/pebble/internals/progress/progresstest"
 )
 
 // Hook up check.v1 into the "go test" runner
 func Test(t *testing.T) { TestingT(t) }
 
-type ProgressTestSuite struct {
-}
+type ProgressTestSuite struct{}
 
 var _ = Suite(&ProgressTestSuite{})
 

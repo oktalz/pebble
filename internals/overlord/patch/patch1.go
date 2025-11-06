@@ -15,7 +15,7 @@
 package patch
 
 import (
-	"github.com/canonical/pebble/internals/overlord/state"
+	"github.com/oktalz/pebble/internals/overlord/state"
 )
 
 func init() {
@@ -26,7 +26,6 @@ func init() {
 // Do NOT replace the logic below by a real patch, as this patch will have
 // been applied in systems for real already and have no effect.
 func patch1(s *state.State) error {
-
 	// Here you can have any logic you want manipulating s and the
 	// system itself when required to reflect such changes.
 

@@ -17,13 +17,15 @@ package cli
 import (
 	"github.com/canonical/go-flags"
 
-	"github.com/canonical/pebble/client"
+	"github.com/oktalz/pebble/client"
 )
 
-const cmdRmSummary = "Remove a file or directory"
-const cmdRmDescription = `
+const (
+	cmdRmSummary     = "Remove a file or directory"
+	cmdRmDescription = `
 The rm command removes a file or directory.
 `
+)
 
 type cmdRm struct {
 	client *client.Client

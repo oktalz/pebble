@@ -17,7 +17,7 @@ package servstate_test
 import (
 	. "gopkg.in/check.v1"
 
-	"github.com/canonical/pebble/internals/overlord/servstate"
+	"github.com/oktalz/pebble/internals/overlord/servstate"
 )
 
 func (s *S) TestStart(c *C) {

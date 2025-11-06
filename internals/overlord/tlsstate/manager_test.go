@@ -24,8 +24,8 @@ import (
 
 	. "gopkg.in/check.v1"
 
-	"github.com/canonical/pebble/cmd"
-	"github.com/canonical/pebble/internals/overlord/tlsstate"
+	"github.com/oktalz/pebble/cmd"
+	"github.com/oktalz/pebble/internals/overlord/tlsstate"
 )
 
 // TestNoDirectory checks if the manager can successfully create a new
@@ -44,7 +44,7 @@ func (ts *tlsSuite) TestNoDirectory(c *C) {
 // does not have the correct permissions.
 func (ts *tlsSuite) TestDirectoryInvalidPerm(c *C) {
 	tlsDir := filepath.Join(c.MkDir(), "tls")
-	err := os.MkdirAll(tlsDir, 0740)
+	err := os.MkdirAll(tlsDir, 0o740)
 	c.Assert(err, IsNil)
 
 	key := newIDKey(c)
@@ -68,7 +68,7 @@ func (ts *tlsSuite) TestKeypairDirNoParent(c *C) {
 // the identity certificate.
 func (ts *tlsSuite) TestInvalidIDCertContent(c *C) {
 	tlsDir := filepath.Join(c.MkDir(), "tls")
-	err := os.MkdirAll(tlsDir, 0700)
+	err := os.MkdirAll(tlsDir, 0o700)
 	c.Assert(err, IsNil)
 
 	key := newIDKey(c)
@@ -88,7 +88,7 @@ func (ts *tlsSuite) TestInvalidIDCertContent(c *C) {
 // the identity certificate.
 func (ts *tlsSuite) TestIDCertExtraBytes(c *C) {
 	tlsDir := filepath.Join(c.MkDir(), "tls")
-	err := os.MkdirAll(tlsDir, 0700)
+	err := os.MkdirAll(tlsDir, 0o700)
 	c.Assert(err, IsNil)
 
 	key := newIDKey(c)
@@ -125,7 +125,7 @@ func (ts *tlsSuite) TestInvalidIDCertPerm(c *C) {
 	c.Assert(err, IsNil)
 
 	// Make the permission invalid.
-	err = os.Chmod(filepath.Join(tlsDir, "identity.pem"), 0644)
+	err = os.Chmod(filepath.Join(tlsDir, "identity.pem"), 0o644)
 	c.Assert(err, IsNil)
 
 	// Simulate a process restart by creating a new manager.

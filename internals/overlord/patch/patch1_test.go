@@ -20,8 +20,8 @@ import (
 
 	. "gopkg.in/check.v1"
 
-	"github.com/canonical/pebble/internals/overlord/patch"
-	"github.com/canonical/pebble/internals/overlord/state"
+	"github.com/oktalz/pebble/internals/overlord/patch"
+	"github.com/oktalz/pebble/internals/overlord/state"
 )
 
 // Analogous to patch1.go itself, this is available as inspiration for actual patch tests.
@@ -43,7 +43,7 @@ var stateBeforePatch1 = []byte(`
 
 func (s *patch1Suite) SetUpTest(c *C) {
 	s.statePath = filepath.Join(c.MkDir(), "state.json")
-	err := os.WriteFile(s.statePath, stateBeforePatch1, 0644)
+	err := os.WriteFile(s.statePath, stateBeforePatch1, 0o644)
 	c.Assert(err, IsNil)
 }
 

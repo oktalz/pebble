@@ -20,16 +20,18 @@ import (
 
 	"github.com/canonical/go-flags"
 
-	"github.com/canonical/pebble/client"
+	"github.com/oktalz/pebble/client"
 )
 
-const cmdAddSummary = "Dynamically add a layer to the plan's layers"
-const cmdAddDescription = `
+const (
+	cmdAddSummary     = "Dynamically add a layer to the plan's layers"
+	cmdAddDescription = `
 The add command reads the plan's layer YAML from the path specified and
 appends a layer with the given label to the plan's layers. If --combine
 is specified, combine the layer with an existing layer that has the given
 label (or append if the label is not found).
 `
+)
 
 type cmdAdd struct {
 	client *client.Client

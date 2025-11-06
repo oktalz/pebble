@@ -21,13 +21,15 @@ import (
 	"github.com/canonical/go-flags"
 	"gopkg.in/yaml.v3"
 
-	"github.com/canonical/pebble/client"
+	"github.com/oktalz/pebble/client"
 )
 
-const cmdCheckSummary = "Query the details of a configured health check"
-const cmdCheckDescription = `
+const (
+	cmdCheckSummary     = "Query the details of a configured health check"
+	cmdCheckDescription = `
 The check command shows details for a single check in YAML format.
 `
+)
 
 type cmdCheck struct {
 	client *client.Client

@@ -13,12 +13,12 @@ import (
 	"golang.org/x/term"
 	. "gopkg.in/check.v1"
 
-	"github.com/canonical/pebble/cmd"
-	"github.com/canonical/pebble/internals/cli"
-	"github.com/canonical/pebble/internals/overlord/pairingstate"
-	"github.com/canonical/pebble/internals/plan"
-	"github.com/canonical/pebble/internals/testutil"
-	"github.com/canonical/pebble/internals/workloads"
+	"github.com/oktalz/pebble/cmd"
+	"github.com/oktalz/pebble/internals/cli"
+	"github.com/oktalz/pebble/internals/overlord/pairingstate"
+	"github.com/oktalz/pebble/internals/plan"
+	"github.com/oktalz/pebble/internals/testutil"
+	"github.com/oktalz/pebble/internals/workloads"
 )
 
 // Hook up check.v1 into the "go test" runner

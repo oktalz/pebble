@@ -20,16 +20,18 @@ import (
 
 	"github.com/canonical/go-flags"
 
-	"github.com/canonical/pebble/client"
+	"github.com/oktalz/pebble/client"
 )
 
-const cmdSignalSummary = "Send a signal to one or more running services"
-const cmdSignalDescription = `
+const (
+	cmdSignalSummary     = "Send a signal to one or more running services"
+	cmdSignalDescription = `
 The signal command sends a signal to one or more running services. The signal
 name must be uppercase, for example:
 
 {{.ProgramName}} signal HUP mysql nginx
 `
+)
 
 type cmdSignal struct {
 	client *client.Client

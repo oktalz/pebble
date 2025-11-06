@@ -17,15 +17,17 @@ package cli
 import (
 	"github.com/canonical/go-flags"
 
-	"github.com/canonical/pebble/client"
+	"github.com/oktalz/pebble/client"
 )
 
-const cmdReplanSummary = "Ensure running services and checks match the current plan"
-const cmdReplanDescription = `
+const (
+	cmdReplanSummary     = "Ensure running services and checks match the current plan"
+	cmdReplanDescription = `
 The replan command starts, stops, or restarts services and checks that have
 changed, so that running services and checks exactly match the desired
 configuration in the current plan.
 `
+)
 
 type cmdReplan struct {
 	client *client.Client

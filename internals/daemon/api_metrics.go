@@ -18,8 +18,8 @@ import (
 	"bytes"
 	"net/http"
 
-	"github.com/canonical/pebble/internals/logger"
-	"github.com/canonical/pebble/internals/metrics"
+	"github.com/oktalz/pebble/internals/logger"
+	"github.com/oktalz/pebble/internals/metrics"
 )
 
 func v1GetMetrics(c *Command, r *http.Request, _ *UserState) Response {

@@ -17,12 +17,14 @@ package standby
 import (
 	"time"
 
-	"github.com/canonical/pebble/internals/overlord/restart"
-	"github.com/canonical/pebble/internals/overlord/state"
+	"github.com/oktalz/pebble/internals/overlord/restart"
+	"github.com/oktalz/pebble/internals/overlord/state"
 )
 
-var standbyWait = 5 * time.Second
-var maxWait = 5 * time.Minute
+var (
+	standbyWait = 5 * time.Second
+	maxWait     = 5 * time.Minute
+)
 
 type Opinionator interface {
 	CanStandby() bool
